@@ -11,5 +11,6 @@ module.exports = [{
       days: 7,
       end: 0,
     }],
-  }];
+  },
+];
   
