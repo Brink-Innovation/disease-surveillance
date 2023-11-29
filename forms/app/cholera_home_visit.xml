@@ -1,0 +1,593 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Cholera home visit</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/cholera_home_visit/contact_tracing/n_educate:label">
+            <value>_Educate other household members on CHOLERA prevention and refer all victims to the hospital</value>
+          </text>
+          <text id="/cholera_home_visit/contact_tracing/other_family_members/no:label">
+            <value>No</value>
+          </text>
+          <text id="/cholera_home_visit/contact_tracing/other_family_members/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/cholera_home_visit/contact_tracing/other_family_members:label">
+            <value>Are there other family members living in the same household as <output value=" /cholera_home_visit/patient_name "/>?</value>
+          </text>
+          <text id="/cholera_home_visit/contact_tracing:label">
+            <value>Contact tracing</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/household_referred/no:label">
+            <value>No</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/household_referred/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/household_referred:label">
+            <value>Have you referred any under 5 or other household members to the health facility?</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_adhering_to_treatment:label">
+            <value>_<output value=" /cholera_home_visit/patient_name "/> is adhering to treatment._</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_body_restlessnes:label">
+            <value>Body restlessness</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_dehydration:label">
+            <value>Dehydration</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_dry_skin:label">
+            <value>Dry skin</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_fever:label">
+            <value>Fever</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_findings_title:label">
+            <value>Findings&lt;I class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_follow_up:label">
+            <value>Tasks will appear when follow up is needed.</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_follow_up_title:label">
+            <value>Follow Up&lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_lack_of_appetite:label">
+            <value>Lack of appetite</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_leg_cramps:label">
+            <value>Leg cramps</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_none:label">
+            <value>None</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_not_adhering_to_treatment:label">
+            <value>_<output value=" /cholera_home_visit/patient_name "/> is not adhering to treatment._</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_patient_details:label">
+            <value>&lt;h4 style=&quot;text-align:center;&quot;&gt;<output value=" /cholera_home_visit/patient_name "/>&lt;/h4&gt;&lt;h5 style=&quot;text-align:center;&quot;&gt;<output value=" /cholera_home_visit/patient_age_in_years "/> years old&lt;/h5&gt;</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_patient_details_title:label">
+            <value>Patient Details&lt;I class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_profuse_watery_diarrhea:label">
+            <value>Profuse watery diarrhea</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_signs_title:label">
+            <value>**_Danger Signs_**</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_submit:label">
+            <value>_Be sure you submit to complete this action._</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_tracing_title:label">
+            <value>**_Contact tracing_**</value>
+          </text>
+          <text id="/cholera_home_visit/group_review/n_vomits_everything:label">
+            <value>Vomits everything</value>
+          </text>
+          <text id="/cholera_home_visit/group_review:label">
+            <value>Results/Summary page</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/_id:label">
+            <value>What is the patient's name?</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/contact/name:label">
+            <value>CHW name</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/contact/phone:label">
+            <value>CHW phone</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/contact:label">
+            <value>Contact</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/date_of_birth:label">
+            <value>Date of Birth</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/name:label">
+            <value>Name</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/patient_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact/sex:label">
+            <value>Sex</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/contact:label">
+            <value>Contact</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/source:label">
+            <value>Source</value>
+          </text>
+          <text id="/cholera_home_visit/inputs/source_id:label">
+            <value>Source ID</value>
+          </text>
+          <text id="/cholera_home_visit/inputs:label">
+            <value>Patient</value>
+          </text>
+          <text id="/cholera_home_visit/ref_type/chp:label">
+            <value>CHP accompaniment</value>
+          </text>
+          <text id="/cholera_home_visit/ref_type/no_chp:label">
+            <value>Without CHP</value>
+          </text>
+          <text id="/cholera_home_visit/ref_type:label">
+            <value>Type of referral</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/n_refer1:label">
+            <value>_Refer <output value=" /cholera_home_visit/patient_name "/> to the health facility for further management._</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/n_refer_and_accompany1:label">
+            <value>_Refer and accompany <output value=" /cholera_home_visit/patient_name "/> to the health facility for further management._</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/body_restlessnes:label">
+            <value>Body restlessness</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/dehydration:label">
+            <value>Dehydration</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/dry_skin:label">
+            <value>Dry skin</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/fever:label">
+            <value>Fever</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/lack_of_appetite:label">
+            <value>Lack of appetite</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/leg_cramps:label">
+            <value>Leg cramps</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/none:label">
+            <value>none</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/profuse_watery_diarrhea:label">
+            <value>Profuse watery diarrhea</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs/vomits_everything:label">
+            <value>Vomits everything</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs:hint">
+            <value>Educate the patient on Cholera drugs side effects</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs:jr:constraintMsg">
+            <value>None cannot be selected with any other option!</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening/signs:label">
+            <value>Is <output value=" /cholera_home_visit/patient_name "/> experiencing any of the following signs?</value>
+          </text>
+          <text id="/cholera_home_visit/signs_screening:label">
+            <value>Danger Signs screening</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/challenges_taking_medication/no:label">
+            <value>No</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/challenges_taking_medication/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/challenges_taking_medication:label">
+            <value>Does <output value=" /cholera_home_visit/patient_name "/> have any challenges taking their medication?</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/n_plan_to_accompany:label">
+            <value>_Plan to accompany <output value=" /cholera_home_visit/patient_name "/> on their next appointment._</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/n_provide_emotional_support:label">
+            <value>_Give <output value=" /cholera_home_visit/patient_name "/> hope of using Cholera medicine</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/next_visit:jr:constraintMsg">
+            <value>Date cannot be in the past!</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/next_visit:label">
+            <value>When is the next appointment date?</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/taking_treatment/no:label">
+            <value>No</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/taking_treatment/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/taking_treatment:hint">
+            <value>Educate new patients using Cholera counselling cards</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance/taking_treatment:label">
+            <value>Is <output value=" /cholera_home_visit/patient_name "/> taking treatment as prescribed?</value>
+          </text>
+          <text id="/cholera_home_visit/treatment_adherance:label">
+            <value>Treatment adherance</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <cholera_home_visit id="cholera_home_visit" prefix="J1!cholera_home_visit!" delimiter="#" version="2023-11-27 12:36:43">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source>user</source>
+            <source_id/>
+            <contact>
+              <_id/>
+              <name/>
+              <patient_id/>
+              <date_of_birth>0</date_of_birth>
+              <sex/>
+              <contact>
+                <name/>
+                <phone/>
+              </contact>
+            </contact>
+          </inputs>
+          <source/>
+          <source_id/>
+          <patient_age_in_years/>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <date_of_birth/>
+          <treatment_adherance>
+            <taking_treatment/>
+            <challenges_taking_medication/>
+            <n_provide_emotional_support/>
+            <next_visit/>
+            <n_plan_to_accompany/>
+          </treatment_adherance>
+          <signs_screening>
+            <signs/>
+            <refer_and_accompany/>
+            <refer_only/>
+            <n_refer_and_accompany1/>
+            <n_refer1/>
+          </signs_screening>
+          <contact_tracing>
+            <other_family_members/>
+            <n_educate/>
+          </contact_tracing>
+          <ref_type/>
+          <group_review>
+            <n_submit/>
+            <n_patient_details_title/>
+            <n_patient_details/>
+            <n_findings_title/>
+            <n_adhering_to_treatment/>
+            <n_not_adhering_to_treatment/>
+            <n_signs_title/>
+            <n_profuse_watery_diarrhea/>
+            <n_dehydration/>
+            <n_lack_of_appetite/>
+            <n_vomits_everything/>
+            <n_body_restlessnes/>
+            <n_leg_cramps/>
+            <n_dry_skin/>
+            <n_fever/>
+            <n_none/>
+            <n_tracing_title/>
+            <household_referred/>
+            <n_follow_up_title/>
+            <n_follow_up/>
+          </group_review>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </cholera_home_visit>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/cholera_home_visit/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/cholera_home_visit/inputs/source" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/source_id" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/name" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/sex" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/contact/name" type="string"/>
+      <bind nodeset="/cholera_home_visit/inputs/contact/contact/phone" type="string"/>
+      <bind nodeset="/cholera_home_visit/source" type="string" calculate="../inputs/source"/>
+      <bind nodeset="/cholera_home_visit/source_id" type="string" calculate="../inputs/source_id"/>
+      <bind nodeset="/cholera_home_visit/patient_age_in_years" type="string" calculate="floor( difference-in-months( ../inputs/contact/date_of_birth, today() ) div 12 )"/>
+      <bind nodeset="/cholera_home_visit/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/cholera_home_visit/patient_id" type="string" required="true()" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/cholera_home_visit/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/cholera_home_visit/date_of_birth" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/cholera_home_visit/treatment_adherance/taking_treatment" type="select1"/>
+      <bind nodeset="/cholera_home_visit/treatment_adherance/challenges_taking_medication" type="select1"/>
+      <bind nodeset="/cholera_home_visit/treatment_adherance/n_provide_emotional_support" readonly="true()" type="string" relevant="selected(../challenges_taking_medication, 'yes')"/>
+      <bind nodeset="/cholera_home_visit/treatment_adherance/next_visit" type="date" jr:constraintMsg="jr:itext('/cholera_home_visit/treatment_adherance/next_visit:jr:constraintMsg')" constraint="decimal-date-time(.) &gt;= decimal-date-time(today())"/>
+      <bind nodeset="/cholera_home_visit/treatment_adherance/n_plan_to_accompany" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/signs_screening/signs" type="select" jr:constraintMsg="jr:itext('/cholera_home_visit/signs_screening/signs:jr:constraintMsg')" constraint="not(selected(., 'none')
+and count-selected(.) &gt; 1)"/>
+      <bind nodeset="/cholera_home_visit/signs_screening/refer_and_accompany" type="string" calculate="if(selected(../signs, 'profuse_watery_diarrhea')
+or selected(../signs, 'dehydration')
+or selected(../signs, 'lack_of_appetite')
+or selected(../signs, 'vomits_everything')
+or selected(../signs, 'body_restlessnes')
+or selected(../signs, 'leg_cramps'),
+'yes', 'no')"/>
+      <bind nodeset="/cholera_home_visit/signs_screening/refer_only" type="string" calculate="if(selected(../signs, 'dry_skin')
+or selected(../signs, 'fever')
+and ../refer_and_accompany = 'no',
+'yes', 'no')"/>
+      <bind nodeset="/cholera_home_visit/signs_screening/n_refer_and_accompany1" readonly="true()" type="string" relevant="../refer_and_accompany = 'yes'"/>
+      <bind nodeset="/cholera_home_visit/signs_screening/n_refer1" readonly="true()" type="string" relevant="../refer_only = 'yes'
+and ../refer_and_accompany = 'no'"/>
+      <bind nodeset="/cholera_home_visit/contact_tracing/other_family_members" type="select1"/>
+      <bind nodeset="/cholera_home_visit/contact_tracing/n_educate" readonly="true()" type="string" relevant="selected(../other_family_members, 'yes')"/>
+      <bind nodeset="/cholera_home_visit/ref_type" type="select1" relevant="(not(selected(../signs_screening/signs, 'none'))
+and count-selected(../signs_screening/signs) &gt;= 1)"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_submit" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_patient_details_title" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_patient_details" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_findings_title" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_adhering_to_treatment" readonly="true()" type="string" relevant="selected(../../treatment_adherance/taking_treatment, 'yes')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_not_adhering_to_treatment" readonly="true()" type="string" relevant="selected(../../treatment_adherance/taking_treatment, 'no')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_signs_title" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_profuse_watery_diarrhea" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'profuse_watery_diarrhea')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_dehydration" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'dehydration')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_lack_of_appetite" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'lack_of_appetite')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_vomits_everything" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'vomits_everything')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_body_restlessnes" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'body_restlessnes')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_leg_cramps" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'leg_cramps')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_dry_skin" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'dry_skin')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_fever" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'fever')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_none" readonly="true()" type="string" relevant="selected(../../signs_screening/signs, 'none')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_tracing_title" readonly="true()" type="string" relevant="selected(../../contact_tracing/other_family_members, 'yes')"/>
+      <bind nodeset="/cholera_home_visit/group_review/household_referred" type="select1" relevant="selected(../../contact_tracing/other_family_members, 'yes')"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_follow_up_title" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/group_review/n_follow_up" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_home_visit/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/cholera_home_visit/inputs">
+      <label ref="jr:itext('/cholera_home_visit/inputs:label')"/>
+      <group ref="/cholera_home_visit/inputs/contact">
+        <label ref="jr:itext('/cholera_home_visit/inputs/contact:label')"/>
+        <input appearance="db-object" ref="/cholera_home_visit/inputs/contact/_id">
+          <label ref="jr:itext('/cholera_home_visit/inputs/contact/_id:label')"/>
+        </input>
+        <group ref="/cholera_home_visit/inputs/contact/contact">
+          <label ref="jr:itext('/cholera_home_visit/inputs/contact/contact:label')"/>
+        </group>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/cholera_home_visit/treatment_adherance">
+      <label ref="jr:itext('/cholera_home_visit/treatment_adherance:label')"/>
+      <select1 ref="/cholera_home_visit/treatment_adherance/taking_treatment">
+        <label ref="jr:itext('/cholera_home_visit/treatment_adherance/taking_treatment:label')"/>
+        <hint ref="jr:itext('/cholera_home_visit/treatment_adherance/taking_treatment:hint')"/>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/treatment_adherance/taking_treatment/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/treatment_adherance/taking_treatment/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/cholera_home_visit/treatment_adherance/challenges_taking_medication">
+        <label ref="jr:itext('/cholera_home_visit/treatment_adherance/challenges_taking_medication:label')"/>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/treatment_adherance/challenges_taking_medication/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/treatment_adherance/challenges_taking_medication/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/cholera_home_visit/treatment_adherance/n_provide_emotional_support">
+        <label ref="jr:itext('/cholera_home_visit/treatment_adherance/n_provide_emotional_support:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/treatment_adherance/next_visit">
+        <label ref="jr:itext('/cholera_home_visit/treatment_adherance/next_visit:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/treatment_adherance/n_plan_to_accompany">
+        <label ref="jr:itext('/cholera_home_visit/treatment_adherance/n_plan_to_accompany:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/cholera_home_visit/signs_screening">
+      <label ref="jr:itext('/cholera_home_visit/signs_screening:label')"/>
+      <select ref="/cholera_home_visit/signs_screening/signs">
+        <label ref="jr:itext('/cholera_home_visit/signs_screening/signs:label')"/>
+        <hint ref="jr:itext('/cholera_home_visit/signs_screening/signs:hint')"/>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/profuse_watery_diarrhea:label')"/>
+          <value>profuse_watery_diarrhea</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/dehydration:label')"/>
+          <value>dehydration</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/lack_of_appetite:label')"/>
+          <value>lack_of_appetite</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/vomits_everything:label')"/>
+          <value>vomits_everything</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/body_restlessnes:label')"/>
+          <value>body_restlessnes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/leg_cramps:label')"/>
+          <value>leg_cramps</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/dry_skin:label')"/>
+          <value>dry_skin</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/fever:label')"/>
+          <value>fever</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/profuse_watery_diarrhea:label')"/>
+          <value>profuse_watery_diarrhea</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/dehydration:label')"/>
+          <value>dehydration</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/lack_of_appetite:label')"/>
+          <value>lack_of_appetite</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/vomits_everything:label')"/>
+          <value>vomits_everything</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/body_restlessnes:label')"/>
+          <value>body_restlessnes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/leg_cramps:label')"/>
+          <value>leg_cramps</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/dry_skin:label')"/>
+          <value>dry_skin</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/fever:label')"/>
+          <value>fever</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/signs_screening/signs/none:label')"/>
+          <value>none</value>
+        </item>
+      </select>
+      <input ref="/cholera_home_visit/signs_screening/n_refer_and_accompany1">
+        <label ref="jr:itext('/cholera_home_visit/signs_screening/n_refer_and_accompany1:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/signs_screening/n_refer1">
+        <label ref="jr:itext('/cholera_home_visit/signs_screening/n_refer1:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/cholera_home_visit/contact_tracing">
+      <label ref="jr:itext('/cholera_home_visit/contact_tracing:label')"/>
+      <select1 ref="/cholera_home_visit/contact_tracing/other_family_members">
+        <label ref="jr:itext('/cholera_home_visit/contact_tracing/other_family_members:label')"/>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/contact_tracing/other_family_members/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/contact_tracing/other_family_members/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/cholera_home_visit/contact_tracing/n_educate">
+        <label ref="jr:itext('/cholera_home_visit/contact_tracing/n_educate:label')"/>
+      </input>
+    </group>
+    <select1 ref="/cholera_home_visit/ref_type">
+      <label ref="jr:itext('/cholera_home_visit/ref_type:label')"/>
+      <item>
+        <label ref="jr:itext('/cholera_home_visit/ref_type/chp:label')"/>
+        <value>chp</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/cholera_home_visit/ref_type/no_chp:label')"/>
+        <value>no_chp</value>
+      </item>
+    </select1>
+    <group appearance="field-list summary" ref="/cholera_home_visit/group_review">
+      <label ref="jr:itext('/cholera_home_visit/group_review:label')"/>
+      <input ref="/cholera_home_visit/group_review/n_submit">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_submit:label')"/>
+      </input>
+      <input appearance="h1 yellow" ref="/cholera_home_visit/group_review/n_patient_details_title">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_patient_details_title:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_patient_details">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_patient_details:label')"/>
+      </input>
+      <input appearance="h1 blue" ref="/cholera_home_visit/group_review/n_findings_title">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_findings_title:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_adhering_to_treatment">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_adhering_to_treatment:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_not_adhering_to_treatment">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_not_adhering_to_treatment:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_signs_title">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_signs_title:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_profuse_watery_diarrhea">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_profuse_watery_diarrhea:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_dehydration">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_dehydration:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_lack_of_appetite">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_lack_of_appetite:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_vomits_everything">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_vomits_everything:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_body_restlessnes">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_body_restlessnes:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_leg_cramps">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_leg_cramps:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_dry_skin">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_dry_skin:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_fever">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_fever:label')"/>
+      </input>
+      <input appearance="li" ref="/cholera_home_visit/group_review/n_none">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_none:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_tracing_title">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_tracing_title:label')"/>
+      </input>
+      <select1 ref="/cholera_home_visit/group_review/household_referred">
+        <label ref="jr:itext('/cholera_home_visit/group_review/household_referred:label')"/>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/group_review/household_referred/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/cholera_home_visit/group_review/household_referred/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input appearance="h1 green" ref="/cholera_home_visit/group_review/n_follow_up_title">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_follow_up_title:label')"/>
+      </input>
+      <input ref="/cholera_home_visit/group_review/n_follow_up">
+        <label ref="jr:itext('/cholera_home_visit/group_review/n_follow_up:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>
