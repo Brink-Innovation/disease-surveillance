@@ -27,13 +27,11 @@ module.exports = [
         type: 'percent',
         goal: 100,
         appliesTo: 'contacts',
-        appliesToType: ['household_member', 'household'],
+        appliesToType: ['household_member', 'household_contact'],
         appliesIf: function(contact){
-            console.log('contactFollowUpApplies', contact);
-            return contact.contact.contact_type === 'household_member' || contact.contact.contact_type === 'household';
+            return contact.contact.contact_type === 'household_member'|| contact.contact.contact_type === 'household_contact';
         },
         passesIf: function(contact){
-            console.log('contactFollowUpPasses', contact);
             let allContactReports = contact.reports;
             let assessmentForm = 'household_member_assessment';
             for (const obj of allContactReports) {
@@ -51,13 +49,17 @@ module.exports = [
         translation_key:'target.referrals_given',
         subtitle_translation_key: 'target.referrals_given.subtitle',
         icon: 'icon-referral',
-        type: 'count',
-        goal: 20,
+        type: 'percent',
+        goal: -1,
         appliesTo: 'reports',
         appliesToType: ['household_member_assessment'],
-        appliesIf: function(contact, report){
+        passesIf: function(contact, report){
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
             return referralGiven === 'yes';
+        },
+        appliesIf: function(contact, report){
+            let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
+            return referralGiven === 'yes' || referralGiven === 'no';
         },
         date: 'reported',
         aggregate: true
@@ -86,6 +88,21 @@ module.exports = [
                 }
             }
             return false;
+        },
+        date: 'reported',
+        aggregate: true
+    },
+    {
+        id:'deaths_reported_target',
+        translation_key:'target.deaths_reported',
+        subtitle_translation_key: 'target.deaths_reported.subtitle',
+        icon: 'icon-death-general',
+        type: 'count',
+        goal: -1,
+        appliesTo: 'reports',
+        appliesToType: ['death_report'],
+        appliesIf: function(){
+            return true;
         },
         date: 'reported',
         aggregate: true

@@ -1,21 +1,70 @@
+const extras = require('./nools-extras');
+const {capitalizeFirstLetter, titleCaseLetters, pushFieldsToSingleArray, getMostRecentReport} = extras;
+
 // contact, reports, lineage are globally available for contact-summary
 const thisContact = contact;
 const thisLineage = lineage;
-const fields = [
-  { appliesToType: 'person', label: 'patient_id', value: thisContact.patient_id, width: 4 },
-  { appliesToType: 'person', label: 'contact.age', value: thisContact.date_of_birth, filter: 'age', width: 4 },
-  { appliesToType: 'person', label: 'contact.sex', value: 'contact.sex.' + thisContact.sex, translate: true, width: 4 },
-  { appliesToType: 'person', label: 'person.field.phone', value: thisContact.phone, width: 4 },
-  { appliesToType: 'person', label: 'person.field.alternate_phone', value: thisContact.phone_alternate, width: 4 },
-  { appliesToType: '!person', label: 'contact', value: thisContact.contact && thisContact.contact.name, width: 4 },
-  { appliesToType: '!person', label: 'contact.phone', value: thisContact.contact && thisContact.contact.phone, width: 4 },
-  { label: 'External ID', value: thisContact.external_id, width: 4 },
-  { label: 'contact.parent', appliesIf: () => thisContact.parent && thisLineage[0], value: thisLineage, filter: 'lineage' },
-  { label: 'Address', value: thisContact.address },
-  { label: 'contact.notes', value: thisContact.notes },
+const allReports = reports;
+let allFields = [];
+let allCards = [];
+
+
+const householdMemberFields = [
+  {appliesToType: ['household_member', 'household_contact'], label: 'Name', value: thisContact.name || thisContact.display_name, width: 4 },
+  {appliesToType: ['household_member', 'household_contact'], label: 'Age', value: thisContact.date_of_birth, filter: 'age', width: 4 },
+  {appliesToType: ['household_member', 'household_contact'], label: 'Gender', value: capitalizeFirstLetter(thisContact.sex), width: 4 },
+  {appliesToType: ['household_member', 'household_contact'], label: 'Phone', value: thisContact.phone||'Not Provided', width: 4},
+  {appliesToType: ['household_member', 'household_contact'], label: 'Belongs To', appliesIf: () => thisContact.parent && thisLineage[0], value: thisLineage, filter: 'lineage', width: 8 },
 ];
+const houseHoldFields = [
+  {appliesToType: ['household'], label: 'Household Head', value: titleCaseLetters(thisContact.contact && thisContact.contact.name), width: 6 },
+  {appliesToType: ['household'], label: 'Belongs To', appliesIf: () => thisContact.parent && thisLineage[0], value: thisLineage, filter: 'lineage', width: 6},
+];
+
+const householdMemberCards = [
+  {
+    label: `Condition Card`,
+    appliesToType: ['report'],
+    appliesIf: (report) => {
+        let correctContact = thisContact.contact_type === 'household_member' || thisContact.contact_type === 'household_contact';
+        let correctForm = report.form === 'household_member_assessment' || report.form === 'cholera_verification';
+        let isAssessmentFormLatest = report === getMostRecentReport(allReports, 'household_member_assessment');
+        let isCholeraFormLatest = report === getMostRecentReport(allReports, 'cholera_verification');
+        return correctContact && correctForm && (isAssessmentFormLatest || isCholeraFormLatest);
+      },
+    fields: [
+      {
+        label: 'Assessment Condition',
+        icon: 'health-condition',
+        appliesIf: (report) => report.form === 'household_member_assessment',
+        value: function(report){
+          let dangerSignsPresent = report.fields.household_member_assessment.initial_symptoms;
+          let healthCondition = dangerSignsPresent === 'yes' ? 'suspicious cholera case' : 'no signs of cholera';
+          return healthCondition;
+        },
+        width: 6
+      },
+      {
+        label: 'Cholera Verification',
+        icon: 'cholera-verification',
+        appliesIf: (report) => report.form === 'cholera_verification',
+        value: function(report){
+          let choleraVerification = report.fields.danger_signs.confirm_case;
+          let status = choleraVerification === 'yes' ? 'confirmed cholera case' : 'not a cholera case';
+          return status;
+        },
+        width: 6
+      },
+    ]
+  }
+];
+
+allFields = pushFieldsToSingleArray(householdMemberFields, allFields);
+allFields = pushFieldsToSingleArray(houseHoldFields, allFields);
+allCards = pushFieldsToSingleArray(householdMemberCards, allCards);
+
 module.exports = {
   context: {},
-  cards: [],
-  fields: fields
+  cards: allCards,
+  fields: allFields,
 };
