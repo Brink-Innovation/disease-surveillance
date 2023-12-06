@@ -8,8 +8,6 @@ const allReports = reports;
 let allFields = [];
 let allCards = [];
 
-console.log(thisContact);
-
 
 const householdMemberFields = [
   {appliesToType: ['household_member', 'household_contact'], label: 'Name', value: thisContact.name || thisContact.display_name, width: 4 },
