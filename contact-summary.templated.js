@@ -1,66 +1,36 @@
 const extras = require('./nools-extras');
-const {capitalizeFirstLetter, titleCaseLetters, pushFieldsToSingleArray, getMostRecentReport} = extras;
+const allContactSummariesAndConditionCards = require('./contact_summaries');
+const {
+  householdMemberFields,
+  householdContactFields,
+  houseHoldFields,
+  householdMemberCards,
+  chpFields,
+  communityHealthUnitFields,
+  chaFields,
+  diseaseSurveillanceFields,
+  facilityFields,
+  supervisorRegionFields,
+} = allContactSummariesAndConditionCards;
+const {
+  pushFieldsToSingleArray,
+} = extras;
 
-// contact, reports, lineage are globally available for contact-summary
-const thisContact = contact;
-const thisLineage = lineage;
-const allReports = reports;
+// contact, reports, lineage are globally available for contact-summary.templated.js
 let allFields = [];
 let allCards = [];
 
 
-const householdMemberFields = [
-  {appliesToType: ['household_member', 'household_contact'], label: 'Name', value: thisContact.name || thisContact.display_name, width: 4 },
-  {appliesToType: ['household_member', 'household_contact'], label: 'Age', value: thisContact.date_of_birth, filter: 'age', width: 4 },
-  {appliesToType: ['household_member', 'household_contact'], label: 'Gender', value: capitalizeFirstLetter(thisContact.sex), width: 4 },
-  {appliesToType: ['household_member', 'household_contact'], label: 'Phone', value: thisContact.phone||'Not Provided', width: 4},
-  {appliesToType: ['household_member', 'household_contact'], label: 'Belongs To', appliesIf: () => thisContact.parent && thisLineage[0], value: thisLineage, filter: 'lineage', width: 8 },
-];
-const houseHoldFields = [
-  {appliesToType: ['household'], label: 'Household Head', value: titleCaseLetters(thisContact.contact && thisContact.contact.name), width: 6 },
-  {appliesToType: ['household'], label: 'Belongs To', appliesIf: () => thisContact.parent && thisLineage[0], value: thisLineage, filter: 'lineage', width: 6},
-];
-
-const householdMemberCards = [
-  {
-    label: `Condition Card`,
-    appliesToType: ['report'],
-    appliesIf: (report) => {
-        let correctContact = thisContact.contact_type === 'household_member' || thisContact.contact_type === 'household_contact';
-        let correctForm = report.form === 'household_member_assessment' || report.form === 'cholera_verification';
-        let isAssessmentFormLatest = report === getMostRecentReport(allReports, 'household_member_assessment');
-        let isCholeraFormLatest = report === getMostRecentReport(allReports, 'cholera_verification');
-        return correctContact && correctForm && (isAssessmentFormLatest || isCholeraFormLatest);
-      },
-    fields: [
-      {
-        label: 'Assessment Condition',
-        icon: 'health-condition',
-        appliesIf: (report) => report.form === 'household_member_assessment',
-        value: function(report){
-          let dangerSignsPresent = report.fields.household_member_assessment.initial_symptoms;
-          let healthCondition = dangerSignsPresent === 'yes' ? 'suspicious cholera case' : 'no signs of cholera';
-          return healthCondition;
-        },
-        width: 6
-      },
-      {
-        label: 'Cholera Verification',
-        icon: 'cholera-verification',
-        appliesIf: (report) => report.form === 'cholera_verification',
-        value: function(report){
-          let choleraVerification = report.fields.danger_signs.confirm_case;
-          let status = choleraVerification === 'yes' ? 'confirmed cholera case' : 'not a cholera case';
-          return status;
-        },
-        width: 6
-      },
-    ]
-  }
-];
 
 allFields = pushFieldsToSingleArray(householdMemberFields, allFields);
+allFields = pushFieldsToSingleArray(householdContactFields, allFields);
 allFields = pushFieldsToSingleArray(houseHoldFields, allFields);
+allFields = pushFieldsToSingleArray(facilityFields, allFields);
+allFields = pushFieldsToSingleArray(diseaseSurveillanceFields, allFields);
+allFields = pushFieldsToSingleArray(communityHealthUnitFields, allFields);
+allFields = pushFieldsToSingleArray(chpFields, allFields);
+allFields = pushFieldsToSingleArray(chaFields, allFields);
+allFields = pushFieldsToSingleArray(supervisorRegionFields, allFields);
 allCards = pushFieldsToSingleArray(householdMemberCards, allCards);
 
 module.exports = {
