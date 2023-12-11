@@ -43,7 +43,7 @@ let chpTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         aggregate: true,
         context: "user.contact_type === 'community_health_volunteer'"
     },
@@ -64,7 +64,7 @@ let chpTargets = [
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
             return referralGiven === 'yes' || referralGiven === 'no';
         },
-        date: 'reported',
+        date: 'now',
         aggregate: true,
         context: "user.contact_type === 'community_health_volunteer'"
     },
@@ -92,7 +92,7 @@ let chpTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         aggregate: true,
         context: "user.contact_type === 'community_health_volunteer'"
     },
@@ -105,7 +105,14 @@ let chpTargets = [
         goal: -1,
         appliesTo: 'reports',
         appliesToType: ['death_report'],
-        appliesIf: function(){
+        appliesIf: function(contact){
+            let allContactReports = contact.reports;
+            let undoDeathForm = 'undo_death_report';
+            for (const obj of allContactReports) {
+                if (obj.form === undoDeathForm) {
+                    return false;
+                }
+            }
             return true;
         },
         date: 'reported',
