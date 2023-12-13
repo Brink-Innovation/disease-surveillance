@@ -222,5 +222,9 @@
       "parents": ["household"],
       "person": true
       }
-]
+],
+"death_reporting": {
+  "mark_deceased_forms": ["death_report"],
+  "undo_deceased_forms": ["undo_death_report"]
+}
 }
