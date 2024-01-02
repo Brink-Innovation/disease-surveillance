@@ -161,6 +161,9 @@
           <text id="/cholera_suspicion_follow_up/group_review/summary_name:label">
             <value>Cholera Follow – up summary&lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
           </text>
+          <text id="/cholera_suspicion_follow_up/group_review/the_finding:label">
+            <value>Findings &lt;i class="fa fa-medkit" aria-hidden="true"&gt;&lt;/i&gt;</value>
+          </text>
           <text id="/cholera_suspicion_follow_up/group_review/todo_task:label">
             <value>Fill Referral Form for the Patient</value>
           </text>
@@ -206,7 +209,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_suspicion_follow_up id="cholera_suspicion_follow_up" prefix="J1!cholera_suspicion_follow_up!" delimiter="#" version="2023-12-06 10:12:34">
+        <cholera_suspicion_follow_up id="cholera_suspicion_follow_up" prefix="J1!cholera_suspicion_follow_up!" delimiter="#" version="2023-12-13 17:00:16">
           <inputs>
             <meta>
               <location>
@@ -272,6 +275,7 @@
             <cramps/>
             <dry/>
             <feve/>
+            <the_finding/>
             <advise/>
             <facility_recommendation/>
             <recommend/>
@@ -329,6 +333,7 @@
       <bind nodeset="/cholera_suspicion_follow_up/group_review/cramps" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/leg_cramps  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/dry" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/dry_skin  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/feve" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/fever  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/the_finding" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/advise" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/facility_recommendation" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/recommend" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
@@ -517,6 +522,9 @@
       </input>
       <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/feve">
         <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/feve:label')"/>
+      </input>
+      <input appearance="h1 blue" ref="/cholera_suspicion_follow_up/group_review/the_finding">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/the_finding:label')"/>
       </input>
       <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/advise">
         <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/advise:label')"/>

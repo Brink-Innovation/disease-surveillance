@@ -1,6 +1,7 @@
 const extras = require('../nools-extras');
 const {
     getField,
+    getMostRecentReport
 } = extras;
 
 let chpTargets = [
@@ -110,7 +111,12 @@ let chpTargets = [
             let undoDeathForm = 'undo_death_report';
             for (const obj of allContactReports) {
                 if (obj.form === undoDeathForm) {
-                    return false;
+                    let latestUndoDeathReport = getMostRecentReport(allContactReports, undoDeathForm);
+                    let latestDeathReport = getMostRecentReport(allContactReports, 'death_report');
+                    if(latestUndoDeathReport.reported_date > latestDeathReport.reported_date){
+                        return false;
+                    }
+                    return true;
                 }
             }
             return true;
