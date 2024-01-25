@@ -15,11 +15,5 @@ const facilityFields = [
     value: titleCaseLetters(thisContact.contact && thisContact.contact.name),
     width: 6,
 },
-{
-    appliesToType: ['area_health_facility'],
-    label: 'Belongs To',
-    value: 'MOH Kenya',
-    width: 6,
-},
 ];
 module.exports = {facilityFields};
