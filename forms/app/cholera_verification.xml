@@ -18,7 +18,7 @@
             <value>&lt;p style="color:red"&gt;Requested for Immediate Confirmation of Suspected Cholera Case.&lt;/p&gt;</value>
           </text>
           <text id="/cholera_verification/danger_signs/refarall:label">
-            <value>&lt;p style="color:blue"&gt;Fill Referral Form for the Patient &lt;/p&gt;</value>
+            <value>&lt;p style=&quot;color:blue&quot;&gt; Refer <output value=" /cholera_verification/patient_name "/> to health facility&lt;/p&gt;</value>
           </text>
           <text id="/cholera_verification/danger_signs:label">
             <value>Cholera Verification Form</value>
@@ -62,7 +62,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_verification id="cholera_verification" prefix="J1!cholera_verification!" delimiter="#" version="2023-12-06 15:39:56">
+        <cholera_verification id="cholera_verification" prefix="J1!cholera_verification!" delimiter="#" version="2024-01-25 22:52:15">
           <inputs>
             <meta>
               <location>
