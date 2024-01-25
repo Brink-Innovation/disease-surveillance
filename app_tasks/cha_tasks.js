@@ -6,7 +6,7 @@ const {
 let chaTasks = [
 {
     name: 'let-chp-verify-case',
-    title: 'Ask CHP To Verify Case',
+    title: 'Query Reported Case',
     icon: 'cholera-verification',
     appliesTo: 'reports',
     appliesToType: ['household_member_assessment'],
@@ -26,7 +26,7 @@ let chaTasks = [
 },
 {
     name: 'let-cha-verify-death',
-    title: 'Verify Death Report',
+    title: 'Verify Report Death',
     icon: 'icon-death-general',
     appliesTo: 'reports',
     appliesToType: ['death_report'],

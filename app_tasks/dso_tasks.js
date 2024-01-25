@@ -2,7 +2,7 @@
 let dsoTasks = [
     {
         name: 'test-patient-specimen',
-        title: 'Test Patient Specimen',
+        title: 'Conduct Lab Test',
         icon: 'lab-test',
         appliesTo: 'reports',
         appliesToType: ['cholera_verification'],
