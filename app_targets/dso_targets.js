@@ -13,7 +13,7 @@ let dsoTargets = [
             let confirmedCase = report.fields.danger_signs.confirm_case === 'yes';
             return confirmedCase;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     },
     {
@@ -42,7 +42,7 @@ let dsoTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     },
     {
@@ -70,7 +70,35 @@ let dsoTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
+        context: "user.contact_type === 'area_health_facility_nurse'"
+    },
+    {
+        id: 'total-negative-cholera-cases',
+        translation_key: 'target.total_negative_cholera_cases',
+        subtitle_translation_key: 'target.total_negative_cholera_cases.subtitle',
+        icon: 'icon-diarrhoea',
+        type: 'percent',
+        goal: -1,
+        appliesTo: 'reports',
+        appliesToType: ['specimen_form'],
+        appliesIf: function(contact, report){
+            return report.form === 'specimen_form';
+        },
+        passesIf: function(contact){
+            let allContactReports = contact.reports;
+            let specimenForm = 'specimen_form';
+            for (let i=0; i < allContactReports.length; i++) {
+                let obj = allContactReports[i];
+                if (obj.form === specimenForm) {
+                    let formFields = obj.fields;
+                    let result = formFields.specimen_details_group.result;
+                    return  result=== 'negative';
+                }
+            }
+            return false;
+        },
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     }
 ];
