@@ -72,6 +72,34 @@ let dsoTargets = [
         },
         date: 'reported',
         context: "user.contact_type === 'area_health_facility_nurse'"
+    },
+    {
+        id: 'total-negative-cholera-cases',
+        translation_key: 'target.total_negative_cholera_cases',
+        subtitle_translation_key: 'target.total_negative_cholera_cases.subtitle',
+        icon: 'icon-diarrhoea',
+        type: 'percent',
+        goal: -1,
+        appliesTo: 'reports',
+        appliesToType: ['specimen_form'],
+        appliesIf: function(contact, report){
+            return report.form === 'specimen_form';
+        },
+        passesIf: function(contact){
+            let allContactReports = contact.reports;
+            let specimenForm = 'specimen_form';
+            for (let i=0; i < allContactReports.length; i++) {
+                let obj = allContactReports[i];
+                if (obj.form === specimenForm) {
+                    let formFields = obj.fields;
+                    let result = formFields.specimen_details_group.result;
+                    return  result=== 'negative';
+                }
+            }
+            return false;
+        },
+        date: 'reported',
+        context: "user.contact_type === 'area_health_facility_nurse'"
     }
 ];
 module.exports = {dsoTargets};
