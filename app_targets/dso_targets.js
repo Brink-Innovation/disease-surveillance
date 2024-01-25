@@ -13,7 +13,7 @@ let dsoTargets = [
             let confirmedCase = report.fields.danger_signs.confirm_case === 'yes';
             return confirmedCase;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     },
     {
@@ -42,7 +42,7 @@ let dsoTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     },
     {
@@ -70,7 +70,7 @@ let dsoTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     },
     {
@@ -98,7 +98,7 @@ let dsoTargets = [
             }
             return false;
         },
-        date: 'reported',
+        date: 'now',
         context: "user.contact_type === 'area_health_facility_nurse'"
     }
 ];
