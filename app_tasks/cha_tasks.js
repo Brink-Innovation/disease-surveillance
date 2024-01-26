@@ -26,7 +26,7 @@ let chaTasks = [
 },
 {
     name: 'let-cha-verify-death',
-    title: 'Verify Report Death',
+    title: 'Verify Death Report',
     icon: 'icon-death-general',
     appliesTo: 'reports',
     appliesToType: ['death_report'],
