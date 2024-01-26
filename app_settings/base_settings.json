@@ -221,7 +221,7 @@
       "group_key": "contact.type.household_contact.plural",
       "parents": ["household"],
       "person": true
-      }
+    }
 ],
 "death_reporting": {
   "mark_deceased_forms": ["death_report"],
