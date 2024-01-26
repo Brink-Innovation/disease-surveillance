@@ -68,11 +68,11 @@
           <text id="/household_member_assessment/household_member_assessment/advice_note:label">
             <value>&lt;p style="color:green;"&gt;Advise patient on the importance of maintaining hygiene to prevent Cholera&lt;/p&gt;</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute_watery_diarrhea:label">
-            <value>Acute watery Diarrhea</value>
+          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute watery diarrhea:label">
+            <value>Acute watery diarrhea</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse_effortless_watery_diarrhoea:label">
-            <value>Profuse effortless watery diarrhoea</value>
+          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse effortless watery diarrhea:label">
+            <value>Profuse effortless watery diarrhea</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms:label">
             <value>What kind of diarrhea Is the patient experiencing?</value>
@@ -280,10 +280,10 @@
           <text id="/household_member_assessment/household_member_assessment/advice_note:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute_watery_diarrhea:label">
+          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute watery diarrhea:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse_effortless_watery_diarrhoea:label">
+          <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse effortless watery diarrhea:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms:label">
@@ -451,7 +451,7 @@
         </translation>
       </itext>
       <instance>
-        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-12-06 17:31:35">
+        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2024-01-26 08:34:08">
           <inputs>
             <meta>
               <location>
@@ -646,12 +646,12 @@
       <select1 ref="/household_member_assessment/household_member_assessment/crucial_symptoms">
         <label ref="jr:itext('/household_member_assessment/household_member_assessment/crucial_symptoms:label')"/>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/crucial_symptoms/acute_watery_diarrhea:label')"/>
-          <value>acute_watery_diarrhea</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/crucial_symptoms/acute watery diarrhea:label')"/>
+          <value>acute watery diarrhea</value>
         </item>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/crucial_symptoms/profuse_effortless_watery_diarrhoea:label')"/>
-          <value>profuse_effortless_watery_diarrhoea</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/crucial_symptoms/profuse effortless watery diarrhea:label')"/>
+          <value>profuse effortless watery diarrhea</value>
         </item>
       </select1>
       <input ref="/household_member_assessment/household_member_assessment/duration">
