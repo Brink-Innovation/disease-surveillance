@@ -1,23 +1,13 @@
-const allHouseHoldFields = require('./householdFields');
-const { houseHoldFields } = allHouseHoldFields;
-const allHouseHoldContactFields = require('./householdContactFields');
-const { householdContactFields } = allHouseHoldContactFields;
-const allHouseHoldMemberFields = require('./householdMemberFields');
-const { householdMemberFields } = allHouseHoldMemberFields;
-const allHouseHoldCards = require('./householdConditionCards');
-const { householdMemberCards } = allHouseHoldCards;
-const allChpFields = require('./chpFields');
-const { chpFields } = allChpFields;
-const allChuFields = require('./chuFields');
-const { communityHealthUnitFields } = allChuFields;
-const allChaFields = require('./chaFields');
-const { chaFields } = allChaFields;
-const allSurveillanceFields = require('./surveillanceFields');
-const { diseaseSurveillanceFields } = allSurveillanceFields;
-const allFacilityFields = require('./facilityFields');
-const { facilityFields } = allFacilityFields;
-const allSupervisorFields = require('./supervisorFields');
-const { supervisorRegionFields } = allSupervisorFields;
+const { houseHoldFields } = require('./householdFields');
+const { householdContactFields } = require('./householdContactFields');
+const { householdMemberFields } = require('./householdMemberFields');
+const { householdMemberCards } = require('./householdConditionCards');
+const { chpFields } = require('./chpFields');
+const { communityHealthUnitFields } = require('./chuFields');
+const { chaFields } = require('./chaFields');
+const { diseaseSurveillanceFields } = require('./surveillanceFields');
+const { facilityFields } = require('./facilityFields');
+const { supervisorRegionFields } = require('./supervisorFields');
 
 module.exports = {
     houseHoldFields,
