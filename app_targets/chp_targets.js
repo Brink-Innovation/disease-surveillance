@@ -1,8 +1,7 @@
-const extras = require('../nools-extras');
 const {
     getField,
     getMostRecentReport
-} = extras;
+} = require('../nools-extras');
 
 let chpTargets = [
     {

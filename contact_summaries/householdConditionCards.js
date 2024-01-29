@@ -1,5 +1,4 @@
-const extras = require('../nools-extras');
-const {getMostRecentReport} = extras;
+const {getMostRecentReport} =  require('../nools-extras');
 let allReports = reports;
 let thisContact = contact;
 

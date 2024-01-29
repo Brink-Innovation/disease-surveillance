@@ -1,5 +1,4 @@
-const extras = require('../nools-extras');
-const {getField} = extras;
+const {getField} = require('../nools-extras');
 
 let chaTargets = [
     {

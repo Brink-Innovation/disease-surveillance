@@ -1,5 +1,4 @@
-const appTargetExtras = require('./app_targets');
-const {chpTargets, chaTargets, dsoTargets} = appTargetExtras;
+const {chpTargets, chaTargets, dsoTargets} = require('./app_targets');
 module.exports = [
     ...chpTargets,
     ...chaTargets,
