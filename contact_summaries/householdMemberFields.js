@@ -2,7 +2,6 @@ const {capitalizeFirstLetter} = require('../nools-extras');
 
 let thisContact = contact;
 let thisLineage = lineage;
-console.log('thisContact', thisContact);
 
 const householdMemberFields = [
 {

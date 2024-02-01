@@ -1,5 +1,4 @@
 {
-  "type": "commonjs",
   "scripts": {
     "test": "npm run compile-forms && npm run compile-app-settings && npm run unittest",
     "compile-app-settings": "npx cht --no-check compile-app-settings",
@@ -11,5 +10,10 @@
     "cht-conf-test-harness": "^3.0.14",
     "luxon": "^3.4.3",
     "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "chai-exclude": "^2.1.0",
+    "chai-like": "^1.1.1",
+    "chai-things": "^0.2.0"
   }
 }
