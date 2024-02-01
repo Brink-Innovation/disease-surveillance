@@ -6,7 +6,10 @@
     "test": "npm run compile-forms && npm run compile-app-settings && npm run unittest",
     "compile-app-settings": "npx cht --no-check compile-app-settings",
     "compile-forms": "npx cht --no-check convert-app-forms convert-contact-forms",
-    "unittest": "mocha test/**/*.spec.js --timeout 20000"
+    "unittest": "mocha test/**/*.spec.js --timeout 20000",
+    "test-tasks": "mocha test/tasks/**/*.spec.js --timeout 20000",
+    "test-forms": "mocha test/forms/**/*.spec.js --timeout 20000",
+    "test-summaries": "mocha test/contact_summaries/**/*.spec.js --timeout 20000"
   },
   "devDependencies": {
     "chai": "^4.3.7",
