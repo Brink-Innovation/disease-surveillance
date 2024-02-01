@@ -12,8 +12,7 @@ describe('Household Member Assessment Form Test', () => {
         return await harness.stop();
     });
     beforeEach(async () => {
-        await harness.clear();
-        return await harness.setNow('2023-08-24');
+        return await harness.clear();
     });
     afterEach(() => {
         expect(harness.consoleErrors).to.be.empty;

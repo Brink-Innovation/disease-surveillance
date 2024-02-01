@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.7",
-    "cht-conf-test-harness": "^3.0.10",
+    "cht-conf-test-harness": "^3.0.14",
     "luxon": "^3.4.3",
     "mocha": "^5.2.0"
   },
