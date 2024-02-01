@@ -1,5 +1,3 @@
-const extras = require('./nools-extras');
-const allContactSummariesAndConditionCards = require('./contact_summaries');
 const {
   householdMemberFields,
   householdContactFields,
@@ -11,10 +9,10 @@ const {
   diseaseSurveillanceFields,
   facilityFields,
   supervisorRegionFields,
-} = allContactSummariesAndConditionCards;
+} = require('./contact_summaries');
 const {
   pushFieldsToSingleArray,
-} = extras;
+} = require('./nools-extras');
 
 // contact, reports, lineage are globally available for contact-summary.templated.js
 let allFields = [];

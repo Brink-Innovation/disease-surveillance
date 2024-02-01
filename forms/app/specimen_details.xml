@@ -462,7 +462,7 @@
       <bind nodeset="/specimen_details/patient_name" type="string" calculate="../inputs/contact/name"/>
       <bind nodeset="/specimen_details/cholera_specimen" jr:constraintMsg="jr:itext('/specimen_details/cholera_specimen:jr:constraintMsg')"/>
       <bind nodeset="/specimen_details/cholera_specimen/availability" type="select1" required="true()"/>
-      <bind nodeset="/specimen_details/cholera_specimen/follow_up_date" type="date" constraint="floor(decimal-date-time(.) - decimal-date-time(today())) &amp;lt;= 0 and floor(difference-in-months(., today()) div 12) &amp;lt;= 100" jr:constraintMsg="jr:itext('/specimen_details/cholera_specimen/follow_up_date:jr:constraintMsg')" required="true()" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')"/>
+      <bind nodeset="/specimen_details/cholera_specimen/follow_up_date" type="date" required="true()" jr:constraintMsg="jr:itext('/specimen_details/cholera_specimen/follow_up_date:jr:constraintMsg')" constraint="floor(decimal-date-time(.) - decimal-date-time(today())) &amp;lt;= 0 and floor(difference-in-months(., today()) div 12) &amp;lt;= 100" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')"/>
       <bind nodeset="/specimen_details/specimen_details_group" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')"/>
       <bind nodeset="/specimen_details/specimen_details_group/specimen_type" type="select1" required="true()"/>
       <bind nodeset="/specimen_details/specimen_details_group/specimen_id" type="string" required="true()"/>

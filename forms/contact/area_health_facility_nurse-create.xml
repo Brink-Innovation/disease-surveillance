@@ -89,8 +89,8 @@
       <bind nodeset="/data/area_health_facility_nurse/parent" type="string"/>
       <bind nodeset="/data/area_health_facility_nurse/type" type="string"/>
       <bind nodeset="/data/area_health_facility_nurse/name" type="string" required="true()"/>
-      <bind nodeset="/data/area_health_facility_nurse/phone" type="string" jr:constraintMsg="Please check if format is correct or if the digits have exceeded maximum required" constraint="regex(., '^(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})$')"/>
-      <bind nodeset="/data/area_health_facility_nurse/phone_alternate" type="string" jr:constraintMsg="Please check if format is correct or if the digits have exceeded maximum required" constraint="regex(., '^(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})$')"/>
+      <bind nodeset="/data/area_health_facility_nurse/phone" type="string" constraint="regex(., '^(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})$')" jr:constraintMsg="Please check if format is correct or if the digits have exceeded maximum required"/>
+      <bind nodeset="/data/area_health_facility_nurse/phone_alternate" type="string" constraint="regex(., '^(?:254|\+254|0)?(7(?:(?:[12][0-9])|(?:0[0-8])|(9[0-2]))[0-9]{6})$')" jr:constraintMsg="Please check if format is correct or if the digits have exceeded maximum required"/>
       <bind nodeset="/data/area_health_facility_nurse/meta/created_by" type="string" calculate="../../../inputs/user/name"/>
       <bind nodeset="/data/area_health_facility_nurse/meta/created_by_person_uuid" type="string" calculate="../../../inputs/user/contact_id"/>
       <bind nodeset="/data/area_health_facility_nurse/meta/created_by_place_uuid" type="string" calculate="../../../inputs/user/facility_id"/>

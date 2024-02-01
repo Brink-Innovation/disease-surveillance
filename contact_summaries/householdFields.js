@@ -1,5 +1,4 @@
-const extras = require('../nools-extras');
-const {titleCaseLetters} = extras;
+const {titleCaseLetters} = require('../nools-extras');
 
 let thisContact = contact;
 let thisLineage = lineage;

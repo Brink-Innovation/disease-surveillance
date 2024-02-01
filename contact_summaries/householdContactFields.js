@@ -1,5 +1,4 @@
-const extras = require('../nools-extras');
-const {capitalizeFirstLetter} = extras;
+const {capitalizeFirstLetter} = require('../nools-extras');
 
 let thisContact = contact;
 let thisLineage = lineage;
