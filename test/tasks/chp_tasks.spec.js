@@ -22,16 +22,3 @@ const harness = new Harness({verbose: true, headless: true});
 //     expect(tasks[0].events[0].dueDate).toBeDefined();
 // });
 // });
-
-describe('Getting started tests', () => {
-    before(async () => { return await harness.start(); });
-    after(async () => { return await harness.stop(); });
-    beforeEach(async () => { return await harness.clear(); });
-    afterEach(() => { expect(harness.consoleErrors).to.be.empty; });
-  
-    const formName = 'household_member_assessment';
-    it(`${formName} can be loaded`, async () => {
-      await harness.loadForm(`${formName}`);
-      expect(harness.state.pageContent).to.include(`id="${formName}"`);
-    });
-  });

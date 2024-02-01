@@ -1,4 +1,7 @@
 {
+  "name": "disease-surveillance",
+  "version": "1.0.0",
+  "author": "Brink Innovation",
   "scripts": {
     "test": "npm run compile-forms && npm run compile-app-settings && npm run unittest",
     "compile-app-settings": "npx cht --no-check compile-app-settings",
