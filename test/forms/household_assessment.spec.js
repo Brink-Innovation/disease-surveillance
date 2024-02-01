@@ -2,6 +2,7 @@ const { expect } = require('chai');
 const TestHarness = require('cht-conf-test-harness');
 const formName = 'household_member_assessment';
 const harness = new TestHarness();
+const {houseHoldAssessmentScenarios} = require('../forms/form_inputs')
 
 describe('Household Member Assessment Form Test', () => {
     before(async () => {
@@ -23,7 +24,7 @@ describe('Household Member Assessment Form Test', () => {
         expect(harness.state.pageContent).to.include(`${formName}`);
     });
     it(`${formName} form can be filled for no cholera case definition`, async () => {
-        const result = await harness.fillForm(`${formName}`, ['no']);
+        const result = await harness.fillForm(`${formName}`, [...houseHoldAssessmentScenarios.noCholeraCaseDefinition]);
         expect(result.errors).to.be.empty;
         expect(result.report.fields).to.deep.include({
             patient_name: 'Patient Name',
@@ -43,7 +44,7 @@ describe('Household Member Assessment Form Test', () => {
         })
     });
     it(`${formName} form can be filled for yes cholera case definition`, async () => {
-        const result = await harness.fillForm(`${formName}`, ['yes','acute watery diarrhea','4','yes', 'no', 'yes', 'no','no', 'worsening']);
+        const result = await harness.fillForm(`${formName}`, [...houseHoldAssessmentScenarios.choleraCaseDefinition]);
         expect(result.errors).to.be.empty;
         expect(result.report.fields).to.deep.include({
             patient_name: 'Patient Name',
