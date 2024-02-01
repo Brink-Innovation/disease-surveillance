@@ -6,14 +6,15 @@
     "unittest": "mocha test/**/*.spec.js --timeout 20000"
   },
   "devDependencies": {
-    "chai": "^5.0.3",
-    "cht-conf-test-harness": "^3.0.14",
+    "chai": "^4.3.7",
+    "cht-conf-test-harness": "^3.0.10",
     "luxon": "^3.4.3",
-    "mocha": "^10.2.0"
+    "mocha": "^5.2.0"
   },
   "dependencies": {
-    "chai-exclude": "^2.1.0",
+    "chai-exclude": "^1.0.8",
     "chai-like": "^1.1.1",
-    "chai-things": "^0.2.0"
+    "chai-things": "^0.2.0",
+    "semver": "^7.5.4"
   }
 }
