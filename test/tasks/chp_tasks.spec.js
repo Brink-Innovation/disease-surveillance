@@ -16,8 +16,8 @@ beforeEach(async() => {
 });
 afterEach(async() => { expect(harness.consoleErrors).to.be.empty;});
 
-it('should create follow up task for household member with case definition', async() =>{
-    const initialResult = await harness.fillForm(`${triggerForm}`, [...houseHoldAssessmentScenarios.choleraCaseDefinition]);
+it('should not create follow up task for household member with no case definition', async() =>{
+    const initialResult = await harness.fillForm(`${triggerForm}`, [...houseHoldAssessmentScenarios.noCholeraCaseDefinition]);
     expect(initialResult.errors).to.be.empty;
     const tasks = await harness.getTasks();
     expect(tasks).to.have.property('length', 0);
