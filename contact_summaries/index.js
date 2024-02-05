@@ -10,14 +10,14 @@ const { facilityFields } = require('./facilityFields');
 const { supervisorRegionFields } = require('./supervisorFields');
 
 module.exports = {
-    houseHoldFields,
-    householdContactFields,
-    householdMemberFields,
-    householdMemberCards,
-    chpFields,
-    chaFields,
-    communityHealthUnitFields,
-    diseaseSurveillanceFields,
-    facilityFields,
-    supervisorRegionFields,
+  houseHoldFields,
+  householdContactFields,
+  householdMemberFields,
+  householdMemberCards,
+  chpFields,
+  chaFields,
+  communityHealthUnitFields,
+  diseaseSurveillanceFields,
+  facilityFields,
+  supervisorRegionFields,
 };

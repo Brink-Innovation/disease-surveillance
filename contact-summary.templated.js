@@ -10,15 +10,11 @@ const {
   facilityFields,
   supervisorRegionFields,
 } = require('./contact_summaries');
-const {
-  pushFieldsToSingleArray,
-} = require('./nools-extras');
+const { pushFieldsToSingleArray } = require('./nools-extras');
 
 // contact, reports, lineage are globally available for contact-summary.templated.js
 let allFields = [];
 let allCards = [];
-
-
 
 allFields = pushFieldsToSingleArray(householdMemberFields, allFields);
 allFields = pushFieldsToSingleArray(householdContactFields, allFields);

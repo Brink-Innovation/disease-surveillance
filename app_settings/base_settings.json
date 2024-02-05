@@ -48,7 +48,13 @@
   },
   "permissions": {
     "can_access_gateway_api": ["gateway"],
-    "can_bulk_delete_reports": ["program_officer", "chp_supervisor", "chp", "dso", "facility_Dsteam"],
+    "can_bulk_delete_reports": [
+      "program_officer",
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
+    ],
     "can_configure": ["program_officer", "crfo"],
     "can_create_people": ["program_officer", "chp_supervisor", "chp"],
     "can_create_places": ["program_officer", "chp_supervisor", "chp"],
@@ -92,10 +98,33 @@
       "dso",
       "facility_Dsteam"
     ],
-    "can_view_analytics_tab": ["chp_supervisor", "chp", "dso", "facility_Dsteam"],
-    "can_view_call_action": ["program_officer", "chp_supervisor", "chp", "dso", "facility_Dsteam"],
-    "can_view_contacts": ["program_officer", "chp_supervisor", "chp", "dso", "facility_Dsteam"],
-    "can_view_contacts_tab": ["program_officer", "chp_supervisor", "chp", "dso", "facility_Dsteam"],
+    "can_view_analytics_tab": [
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
+    ],
+    "can_view_call_action": [
+      "program_officer",
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
+    ],
+    "can_view_contacts": [
+      "program_officer",
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
+    ],
+    "can_view_contacts_tab": [
+      "program_officer",
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
+    ],
     "can_view_last_visited_date": [],
     "can_view_uhc_stats": [],
     "can_view_message_action": ["program_officer", "chp_supervisor", "chp"],
@@ -108,12 +137,12 @@
     "can_view_tasks_tab": ["chp_supervisor", "chp", "dso", "facility_Dsteam"],
     "can_view_tasks_group": ["chp", "dso", "chp_supervisor", "facility_Dsteam"],
     "can_view_unallocated_data_records": [
-    "gateway",
-    "program_officer",
-    "chp_supervisor",
-    "chp",
-    "dso",
-    "facility_Dsteam"
+      "gateway",
+      "program_officer",
+      "chp_supervisor",
+      "chp",
+      "dso",
+      "facility_Dsteam"
     ],
     "can_view_users": ["program_officer"],
     "can_write_wealth_quintiles": [],
@@ -121,98 +150,98 @@
     "can_upgrade": ["program_officer"],
     "can_view_old_filter_and_search": [],
     "can_view_old_action_bar": []
-},
-"contact_types": [
+  },
+  "contact_types": [
     {
-    "id": "area_health_facility",
-    "icon": "area-health-facility",
-    "name_key": "contact.type.area_health_facility",
-    "group_key": "contact.type.area_health_facility.plural",
-    "create_key": "contact.type.area_health_facility.new",
-    "edit_key": "contact.type.area_health_facility.edit",
-    "create_form": "form:contact:area_health_facility:create",
-    "edit_form": "form:contact:area_health_facility:edit"
+      "id": "area_health_facility",
+      "icon": "area-health-facility",
+      "name_key": "contact.type.area_health_facility",
+      "group_key": "contact.type.area_health_facility.plural",
+      "create_key": "contact.type.area_health_facility.new",
+      "edit_key": "contact.type.area_health_facility.edit",
+      "create_form": "form:contact:area_health_facility:create",
+      "edit_form": "form:contact:area_health_facility:edit"
     },
     {
-    "id": "area_health_facility_nurse",
-    "icon": "area-health-facility-nurse",
-    "name_key": "contact.type.area_health_facility_nurse",
-    "group_key": "contact.type.area_health_facility_nurse.plural",
-    "create_key": "contact.type.area_health_facility_nurse.new",
-    "edit_key": "contact.type.area_health_facility_nurse.edit",
-    "parents": ["area_health_facility"],
-    "create_form": "form:contact:area_health_facility_nurse:create",
-    "edit_form": "form:contact:area_health_facility_nurse:edit",
-    "person": true
+      "id": "area_health_facility_nurse",
+      "icon": "area-health-facility-nurse",
+      "name_key": "contact.type.area_health_facility_nurse",
+      "group_key": "contact.type.area_health_facility_nurse.plural",
+      "create_key": "contact.type.area_health_facility_nurse.new",
+      "edit_key": "contact.type.area_health_facility_nurse.edit",
+      "parents": ["area_health_facility"],
+      "create_form": "form:contact:area_health_facility_nurse:create",
+      "edit_form": "form:contact:area_health_facility_nurse:edit",
+      "person": true
     },
     {
-    "id": "area_supervisor_region",
-    "icon": "area-supervisor-region",
-    "name_key": "contact.type.area_supervisor_region",
-    "group_key": "contact.type.area_supervisor_region.plural",
-    "create_key": "contact.type.area_supervisor_region.new",
-    "edit_key": "contact.type.area_supervisor_region.edit",
-    "parents": ["area_health_facility"],
-    "create_form": "form:contact:area_supervisor_region:create",
-    "edit_form": "form:contact:area_supervisor_region:edit"
+      "id": "area_supervisor_region",
+      "icon": "area-supervisor-region",
+      "name_key": "contact.type.area_supervisor_region",
+      "group_key": "contact.type.area_supervisor_region.plural",
+      "create_key": "contact.type.area_supervisor_region.new",
+      "edit_key": "contact.type.area_supervisor_region.edit",
+      "parents": ["area_health_facility"],
+      "create_form": "form:contact:area_supervisor_region:create",
+      "edit_form": "form:contact:area_supervisor_region:edit"
     },
     {
-    "id": "area_community_health_supervisor",
-    "icon": "area-community-health-supervisor",
-    "name_key": "contact.type.area_community_health_supervisor",
-    "group_key": "contact.type.area_community_health_supervisor.plural",
-    "create_key": "contact.type.area_community_health_supervisor.new",
-    "edit_key": "contact.type.area_community_health_supervisor.edit",
-    "parents": ["area_supervisor_region"],
-    "create_form": "form:contact:area_community_health_supervisor:create",
-    "edit_form": "form:contact:area_community_health_supervisor:edit",
-    "person": true
+      "id": "area_community_health_supervisor",
+      "icon": "area-community-health-supervisor",
+      "name_key": "contact.type.area_community_health_supervisor",
+      "group_key": "contact.type.area_community_health_supervisor.plural",
+      "create_key": "contact.type.area_community_health_supervisor.new",
+      "edit_key": "contact.type.area_community_health_supervisor.edit",
+      "parents": ["area_supervisor_region"],
+      "create_form": "form:contact:area_community_health_supervisor:create",
+      "edit_form": "form:contact:area_community_health_supervisor:edit",
+      "person": true
     },
     {
-    "id": "community_health_area",
-    "icon": "community-health-area",
-    "name_key": "contact.type.community_health_area",
-    "group_key": "contact.type.community_health_area.plural",
-    "create_key": "contact.type.community_health_area.new",
-    "edit_key": "contact.type.community_health_area.edit",
-    "create_form": "form:contact:community_health_area:create",
-    "parents": ["area_supervisor_region"],
-    "edit_form": "form:contact:community_health_area:edit"
+      "id": "community_health_area",
+      "icon": "community-health-area",
+      "name_key": "contact.type.community_health_area",
+      "group_key": "contact.type.community_health_area.plural",
+      "create_key": "contact.type.community_health_area.new",
+      "edit_key": "contact.type.community_health_area.edit",
+      "create_form": "form:contact:community_health_area:create",
+      "parents": ["area_supervisor_region"],
+      "edit_form": "form:contact:community_health_area:edit"
     },
     {
-    "id": "community_health_volunteer",
-    "icon": "community-health-volunteer",
-    "name_key": "contact.type.community_health_volunteer",
-    "group_key": "contact.type.community_health_volunteer.plural",
-    "create_key": "contact.type.community_health_volunteer.new",
-    "edit_key": "contact.type.community_health_volunteer.edit",
-    "parents": ["community_health_area"],
-    "create_form": "form:contact:community_health_volunteer:create",
-    "edit_form": "form:contact:community_health_volunteer:edit",
-    "person": true
+      "id": "community_health_volunteer",
+      "icon": "community-health-volunteer",
+      "name_key": "contact.type.community_health_volunteer",
+      "group_key": "contact.type.community_health_volunteer.plural",
+      "create_key": "contact.type.community_health_volunteer.new",
+      "edit_key": "contact.type.community_health_volunteer.edit",
+      "parents": ["community_health_area"],
+      "create_form": "form:contact:community_health_volunteer:create",
+      "edit_form": "form:contact:community_health_volunteer:edit",
+      "person": true
     },
     {
-    "id": "household",
-    "icon": "icon-people-family",
-    "name_key": "contact.type.household",
-    "group_key": "contact.type.household.plural",
-    "create_key": "contact.type.household.new",
-    "edit_key": "contact.type.household.edit",
-    "parents": ["community_health_area"],
-    "create_form": "form:contact:household:create",
-    "edit_form": "form:contact:household:edit"
+      "id": "household",
+      "icon": "icon-people-family",
+      "name_key": "contact.type.household",
+      "group_key": "contact.type.household.plural",
+      "create_key": "contact.type.household.new",
+      "edit_key": "contact.type.household.edit",
+      "parents": ["community_health_area"],
+      "create_form": "form:contact:household:create",
+      "edit_form": "form:contact:household:edit"
     },
     {
-    "id": "household_member",
-    "icon": "add-member",
-    "name_key": "contact.type.household_member",
-    "group_key": "contact.type.household_member.plural",
-    "create_key": "contact.type.household_member.new",
-    "edit_key": "contact.type.household_member.edit",
-    "parents": ["household"],
-    "create_form": "form:contact:household_member:create",
-    "edit_form": "form:contact:household_member:edit",
-    "person": true
+      "id": "household_member",
+      "icon": "add-member",
+      "name_key": "contact.type.household_member",
+      "group_key": "contact.type.household_member.plural",
+      "create_key": "contact.type.household_member.new",
+      "edit_key": "contact.type.household_member.edit",
+      "parents": ["household"],
+      "create_form": "form:contact:household_member:create",
+      "edit_form": "form:contact:household_member:edit",
+      "person": true
     },
     {
       "id": "household_contact",
@@ -222,9 +251,9 @@
       "parents": ["household"],
       "person": true
     }
-],
-"death_reporting": {
-  "mark_deceased_forms": ["death_report"],
-  "undo_deceased_forms": ["undo_death_report"]
-}
+  ],
+  "death_reporting": {
+    "mark_deceased_forms": ["death_report"],
+    "undo_deceased_forms": ["undo_death_report"]
+  }
 }

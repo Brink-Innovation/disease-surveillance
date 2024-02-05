@@ -1,7 +1,7 @@
 {
-    "title": "Cholera",
-    "resources": {
-        "logo":"appLogo.svg",
-        "favicon": "appLogo.svg"
-    }
+  "title": "Cholera",
+  "resources": {
+    "logo": "appLogo.svg",
+    "favicon": "appLogo.svg"
+  }
 }

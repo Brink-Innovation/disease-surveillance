@@ -1,5 +1,5 @@
 {
-    "context": {
-        "permission": "can_create_supervisor"
-    }
+  "context": {
+    "permission": "can_create_supervisor"
+  }
 }

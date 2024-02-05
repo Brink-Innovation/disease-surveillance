@@ -1,14 +1,12 @@
-
 function getField(report, fieldPath) {
   const parts = (fieldPath || '').split('.');
 
-  return ['fields', ...parts]
-    .reduce((prev, fieldName) => {
-      if (prev === undefined) {
-        return undefined;
-      }
-      return prev[fieldName];
-    }, report);
+  return ['fields', ...parts].reduce((prev, fieldName) => {
+    if (prev === undefined) {
+      return undefined;
+    }
+    return prev[fieldName];
+  }, report);
 }
 
 function capitalizeFirstLetter(string) {
@@ -22,12 +20,16 @@ function titleCaseLetters(str) {
   if (!str) {
     return '';
   }
-  return str.toLowerCase().split(' ').map(function(word) {
-    if(!word) {
-      return '';
-    }
-    return word.replace(word[0], word[0].toUpperCase());
-  }).join(' ');
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(function (word) {
+      if (!word) {
+        return '';
+      }
+      return word.replace(word[0], word[0].toUpperCase());
+    })
+    .join(' ');
 }
 
 function pushFieldsToSingleArray(fields, allFields) {
@@ -41,9 +43,11 @@ function pushFieldsToSingleArray(fields, allFields) {
 function getMostRecentReport(reports, form) {
   let result;
   reports.forEach(function (report) {
-    if (form.includes(report.form) &&
+    if (
+      form.includes(report.form) &&
       !report.deleted &&
-      (!result || report.reported_date > result.reported_date)) {
+      (!result || report.reported_date > result.reported_date)
+    ) {
       result = report;
     }
   });
