@@ -2,6 +2,7 @@
     "coreVersion": "4.0.0",
     "user": "user_contact_id",
     "subject": "patient_id",
+    "ownedBySubject": true,
     
     "docs": [
       {
@@ -27,6 +28,7 @@
         "_id": "user_contact_id",
         "name": "CHW",
         "type": "person",
+        "contact_type": "community_health_volunteer",
         "reported_date": 1550761498368,
         "parent": {
           "_id": "community_health_area_id",
