@@ -4,7 +4,7 @@ This is an implementation to automate the workflows for Community Health Personn
 
 ### To Run the Project on Your Machine
 
-1. Create a new project instance either using docker helper or the old school way
+1. Create a new project instance either using docker helper
 2. Ensure you can access the instance using the availed means of method 1
 3. Clone this repo to a location of your choice on your machine
    **NB: DO NOT INITIALIZE ANOTHER REPOSITORY ON YOUR MACHINE. JUST CLONE THIS ONE.**
@@ -21,3 +21,15 @@ This is an implementation to automate the workflows for Community Health Personn
 7. When you make your initial push. Create a Pull Request and then request for review from your cell lead.
 8. If your changes are approved, your work will be merged to the master branch.
 9. If changes are requested by your reviewer, then you'll make those changes and rinse, repeat.
+
+### Running tests
+1. Install all dependencies by running `npm install`
+2. To run all unit tests, run `npm run unittest`
+3. To test various components, run:
+   * `npm run test-tasks` : Test tasks
+   * `npm run test-forms` : Test forms
+   * `npm run test-summaries`: Test contact summaries
+
+### Project Requirements
+1. You should have latest node version installed (20 or higher)
+2. We highly recommend using nvm to install and manage node
