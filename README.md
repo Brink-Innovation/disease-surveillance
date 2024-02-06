@@ -1,6 +1,6 @@
 # disease-surveillance
 
-This is an implementation to automate the workflows for Community Health Personnels in Kenya
+This is an implementation to automate the workflows for Community Health Promoters in Kenya
 
 ### To Run the Project on Your Machine
 
@@ -9,6 +9,7 @@ This is an implementation to automate the workflows for Community Health Personn
 3. Clone this repo to a location of your choice on your machine
    **NB: DO NOT INITIALIZE ANOTHER REPOSITORY ON YOUR MACHINE. JUST CLONE THIS ONE.**
 4. Upload the forms, brand, resources, settings and tasks to your local instance using `cht-conf` commands
+   **NB: DO NOT COMPILE ANYTHING WHILE ON MASTER BRANCH, JUST UPLOAD AS ALL IS UP TO DATE**
 
 ### To Contribute to this project
 
@@ -32,4 +33,5 @@ This is an implementation to automate the workflows for Community Health Personn
 
 ### Project Requirements
 1. You should have latest node version installed (20 or higher)
-2. We highly recommend using nvm to install and manage node
+2. We highly recommend using nvm to install and manage node versions
+3. You should install prettier globally for code formatting. Run `npm install --global prettier`
