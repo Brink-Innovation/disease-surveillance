@@ -12,7 +12,7 @@ const communityHealthUnitFields = [
     appliesToType: ['community_health_area'],
     label: 'County',
     value: titleCaseLetters(
-      thisContact.selected_county || thisContact.parent.selected_county,
+      thisContact.selected_county || thisContact.parent.selected_county
     ),
     width: 4,
   },
@@ -20,7 +20,7 @@ const communityHealthUnitFields = [
     appliesToType: ['community_health_area'],
     label: 'Sub-County',
     value: titleCaseLetters(
-      thisContact.selected_sub_county || thisContact.parent.selected_sub_county,
+      thisContact.selected_sub_county || thisContact.parent.selected_sub_county
     ),
     width: 4,
   },
@@ -28,7 +28,7 @@ const communityHealthUnitFields = [
     appliesToType: ['community_health_area'],
     label: 'Ward',
     value: titleCaseLetters(
-      thisContact.selected_ward || thisContact.parent.selected_ward,
+      thisContact.selected_ward || thisContact.parent.selected_ward
     ),
     width: 4,
   },

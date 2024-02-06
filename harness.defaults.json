@@ -26,7 +26,7 @@
 
     {
       "_id": "user_contact_id",
-      "name": "CHW",
+      "name": "CHP Name",
       "type": "person",
       "contact_type": "community_health_volunteer",
       "reported_date": 1550761498368,
@@ -42,6 +42,22 @@
             "parent": {
               "_id": "area_health_facility_id"
             }
+          }
+        }
+      }
+    },
+    {
+      "_id": "cha_contact_id",
+      "name": "CHA Name",
+      "type": "person",
+      "contact_type": "area_community_health_supervisor",
+      "reported_date": 1550761498368,
+      "parent": {
+        "_id": "area_supervisor_region_id",
+        "contact": {
+          "_id": "area_supervisor_region_id",
+          "parent": {
+            "_id": "area_health_facility_id"
           }
         }
       }

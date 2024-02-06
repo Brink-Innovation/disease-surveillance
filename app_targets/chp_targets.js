@@ -59,14 +59,14 @@ let chpTargets = [
     passesIf: function (contact, report) {
       let referralGiven = getField(
         report,
-        'household_member_assessment.initial_symptoms',
+        'household_member_assessment.initial_symptoms'
       );
       return referralGiven === 'yes';
     },
     appliesIf: function (contact, report) {
       let referralGiven = getField(
         report,
-        'household_member_assessment.initial_symptoms',
+        'household_member_assessment.initial_symptoms'
       );
       return referralGiven === 'yes' || referralGiven === 'no';
     },
@@ -89,7 +89,7 @@ let chpTargets = [
     appliesIf: function (contact, report) {
       let referralGiven = getField(
         report,
-        'household_member_assessment.initial_symptoms',
+        'household_member_assessment.initial_symptoms'
       );
       return referralGiven === 'yes';
     },
@@ -124,11 +124,11 @@ let chpTargets = [
         if (obj.form === undoDeathForm) {
           let latestUndoDeathReport = getMostRecentReport(
             allContactReports,
-            undoDeathForm,
+            undoDeathForm
           );
           let latestDeathReport = getMostRecentReport(
             allContactReports,
-            'death_report',
+            'death_report'
           );
           if (
             latestUndoDeathReport.reported_date >

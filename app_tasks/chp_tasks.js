@@ -22,7 +22,7 @@ let chpTasks = [
         end: 3,
         dueDate: function (event, contact, report) {
           return new Date(
-            report.reported_date + event.start * 24 * 60 * 60 * 1000,
+            report.reported_date + event.start * 24 * 60 * 60 * 1000
           );
         },
       },
@@ -46,7 +46,7 @@ let chpTasks = [
         end: 3,
         dueDate: function (event, contact, report) {
           return new Date(
-            report.reported_date + event.start * 24 * 60 * 60 * 1000,
+            report.reported_date + event.start * 24 * 60 * 60 * 1000
           );
         },
       },
@@ -73,7 +73,7 @@ let chpTasks = [
         end: 3,
         dueDate: function (event, contact, report) {
           return new Date(
-            report.reported_date + event.start * 24 * 60 * 60 * 1000,
+            report.reported_date + event.start * 24 * 60 * 60 * 1000
           );
         },
       },

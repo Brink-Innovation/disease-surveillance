@@ -13,7 +13,7 @@ let chaTargets = [
     appliesIf: function (contact, report) {
       let caseReported = getField(
         report,
-        'household_member_assessment.initial_symptoms',
+        'household_member_assessment.initial_symptoms'
       );
       return caseReported === 'yes';
     },
@@ -32,7 +32,7 @@ let chaTargets = [
     appliesIf: function (contact, report) {
       let caseReported = getField(
         report,
-        'household_member_assessment.initial_symptoms',
+        'household_member_assessment.initial_symptoms'
       );
       return caseReported === 'yes';
     },

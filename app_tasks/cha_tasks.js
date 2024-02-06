@@ -11,6 +11,7 @@ let chaTasks = [
       let userHasDangerSigns =
         getField(report, 'household_member_assessment.initial_symptoms') ===
         'yes';
+        console.log('danger signs', userHasDangerSigns, user.contact_type);
       return (
         userHasDangerSigns &&
         user.contact_type === 'area_community_health_supervisor'
@@ -23,7 +24,7 @@ let chaTasks = [
         end: 3,
         dueDate: function (event, contact, report) {
           return new Date(
-            report.reported_date + event.start * 24 * 60 * 60 * 1000,
+            report.reported_date + event.start * 24 * 60 * 60 * 1000
           );
         },
       },
@@ -49,7 +50,7 @@ let chaTasks = [
         end: 3,
         dueDate: function (event, contact, report) {
           return new Date(
-            report.reported_date + event.start * 24 * 60 * 60 * 1000,
+            report.reported_date + event.start * 24 * 60 * 60 * 1000
           );
         },
       },

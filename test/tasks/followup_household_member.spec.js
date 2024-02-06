@@ -34,7 +34,7 @@ describe('CHP Follow Up Household Member Task', () => {
 
   it('should not create follow up task for household member with no case definition', async () => {
     const initialResult = await harness.fillForm(`${triggerForm}`, [
-      ...houseHoldAssessmentScenarios.noCholeraCaseDefinition,
+      ...Object.values(houseHoldAssessmentScenarios.noCholeraCaseDefinition),
     ]);
     expect(initialResult.errors).to.be.empty;
     const tasks = await harness.getTasks({
@@ -44,7 +44,7 @@ describe('CHP Follow Up Household Member Task', () => {
   });
   it('should create and resolve follow up task for household member with case definition', async () => {
     const initialResult = await harness.fillForm(`${triggerForm}`, [
-      ...houseHoldAssessmentScenarios.choleraCaseDefinition,
+      ...Object.values(houseHoldAssessmentScenarios.choleraCaseDefinition),
     ]);
     expect(initialResult.errors).to.be.empty;
     await harness.flush({ days: 1 });
