@@ -3,6 +3,7 @@ const Harness = require('cht-conf-test-harness');
 const harness = new Harness({harnessDataPath: 'dso_user.defaults.json'});
 const {
   confirmReportedCaseScenarios,
+  specimenCollectedScenarios
 } = require('../forms/form_inputs');
 const { TASKS_TITLE } = require('../constants');
 const { DateTime } = require('luxon');
@@ -60,5 +61,22 @@ describe('DSO Test Referred Patient Specimen Task', () => {
     Draft: 0,
     Ready: 1,
     });
+    const filledFollowUpForm = await harness.loadAction(tasks[0], [
+        ...Object.values(specimenCollectedScenarios.specimenNotCollected),
+      ]);
+      expect(filledFollowUpForm.errors).to.be.empty;
+      tasks = await harness.getTasks({
+        title: TASKS_TITLE.testPatientSpecimen,
+      });
+      expect(tasks.length).to.equal(0);
+      taskSummary = await harness.countTaskDocsByState({
+        title: TASKS_TITLE.testPatientSpecimen,
+      });
+      expect(taskSummary).to.nested.include({
+        Completed: 1,
+        Failed: 0,
+        Draft: 0,
+        Ready: 0,
+      });
 });
 });

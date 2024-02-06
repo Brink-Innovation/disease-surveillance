@@ -22,5 +22,8 @@ module.exports = {
   confirmReportedCaseScenarios:{
     confirmedCase: {confirm_case: 'yes'},
     unconfirmedCase: {confirm_case: 'no'}
+  },
+  specimenCollectedScenarios: {
+    specimenNotCollected: {specimen_collected: 'no'}
   }
 };

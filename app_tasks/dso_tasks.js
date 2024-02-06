@@ -11,7 +11,7 @@ let dsoTasks = [
         confirmedCase && user.contact_type === 'area_health_facility_nurse'
       );
     },
-    actions: [{ form: 'specimen_form', label: 'Investigate' }],
+    actions: [{ form: 'specimen_details', label: 'Investigate' }],
     events: [
       {
         start: 3,
