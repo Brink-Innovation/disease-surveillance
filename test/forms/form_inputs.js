@@ -25,5 +25,15 @@ module.exports = {
   },
   specimenCollectedScenarios: {
     specimenNotCollected: {specimen_collected: 'no'}
-  }
+  },
+  specimenFormScenarios:{
+    page1positiveCholeraCase: ['yes','2024-02-05'],
+    page2positiveCholeraCase:['both','SPEC01','positive',''],
+    untestCholeraCase: ['no']
+  },
+  choleraFollowupScenarios:{
+    choleraFollowup:['yes','yes','yes','yes','yes','yes','yes','yes','yes','yes'],
+    nocholeraFollowup:['no','Recovered','no']
+}
 };
+
