@@ -10,7 +10,7 @@ const { DateTime } = require('luxon');
 const now = DateTime.now();
 const triggerForm = 'household_member_assessment';
 
-describe('CHA Query Reported Case Task', () => {
+describe('CHA Query CHP About Reported Case Task', () => {
     before(async () => {
         return await harness.start();
       });

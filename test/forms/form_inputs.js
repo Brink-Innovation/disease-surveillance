@@ -18,5 +18,9 @@ module.exports = {
   },
   queryCholeraCaseScenarios:{
     seekVerification: {chp_to_verify: 'yes'}
+  },
+  confirmReportedCaseScenarios:{
+    confirmedCase: {confirm_case: 'yes'},
+    unconfirmedCase: {confirm_case: 'no'}
   }
 };
