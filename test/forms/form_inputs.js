@@ -16,4 +16,7 @@ module.exports = {
     },
     noCholeraCaseDefinition: { danger_signs_present: 'no' },
   },
+  queryCholeraCaseScenarios:{
+    seekVerification: {chp_to_verify: 'yes'}
+  }
 };

@@ -1,6 +1,6 @@
 {
   "coreVersion": "4.0.0",
-  "user": "user_contact_id",
+  "user": "chp_contact_id",
   "subject": "patient_id",
   "ownedBySubject": true,
 
@@ -25,7 +25,7 @@
     },
 
     {
-      "_id": "user_contact_id",
+      "_id": "chp_contact_id",
       "name": "CHP Name",
       "type": "person",
       "contact_type": "community_health_volunteer",
@@ -42,22 +42,6 @@
             "parent": {
               "_id": "area_health_facility_id"
             }
-          }
-        }
-      }
-    },
-    {
-      "_id": "cha_contact_id",
-      "name": "CHA Name",
-      "type": "person",
-      "contact_type": "area_community_health_supervisor",
-      "reported_date": 1550761498368,
-      "parent": {
-        "_id": "area_supervisor_region_id",
-        "contact": {
-          "_id": "area_supervisor_region_id",
-          "parent": {
-            "_id": "area_health_facility_id"
           }
         }
       }

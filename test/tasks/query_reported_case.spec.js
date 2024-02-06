@@ -1,8 +1,9 @@
 const { expect } = require('chai');
 const Harness = require('cht-conf-test-harness');
-const harness = new Harness();
+const harness = new Harness({harnessDataPath: 'cha_user.defaults.json'});
 const {
   houseHoldAssessmentScenarios,
+  queryCholeraCaseScenarios
 } = require('../forms/form_inputs');
 const { TASKS_TITLE } = require('../constants');
 const { DateTime } = require('luxon');
@@ -53,20 +54,27 @@ describe('CHA Query Reported Case Task', () => {
           title: TASKS_TITLE.queryReportedCase,
         });
         expect(taskSummary).to.nested.include({
-          Completed: 0,
-          Failed: 0,
+            Completed: 0,
+            Failed: 0,
+            Draft: 0,
+            Ready: 1,
         });
-        await harness.resolveTask(tasks[0]);
-        tasks = await harness.getTasks({
-          title: TASKS_TITLE.queryReportedCase,
-        });
-        expect(tasks.length).to.equal(0);
-        taskSummary = await harness.countTaskDocsByState({
-          title: TASKS_TITLE.queryReportedCase,
-        });
-        expect(taskSummary).to.nested.include({
-          Completed: 1,
-          Failed: 0,
-        });
+        const filledFollowUpForm = await harness.loadAction(tasks[0], [
+            ...Object.values(queryCholeraCaseScenarios.seekVerification),
+          ]);
+          expect(filledFollowUpForm.errors).to.be.empty;
+          tasks = await harness.getTasks({
+            title: TASKS_TITLE.queryReportedCase,
+          });
+          expect(tasks.length).to.equal(0);
+          taskSummary = await harness.countTaskDocsByState({
+            title: TASKS_TITLE.queryReportedCase,
+          });
+          expect(taskSummary).to.nested.include({
+            Completed: 1,
+            Failed: 0,
+            Draft: 0,
+            Ready: 0,
+          });
     });
 });

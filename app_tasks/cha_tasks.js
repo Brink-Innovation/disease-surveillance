@@ -11,7 +11,6 @@ let chaTasks = [
       let userHasDangerSigns =
         getField(report, 'household_member_assessment.initial_symptoms') ===
         'yes';
-        console.log('danger signs', userHasDangerSigns, user.contact_type);
       return (
         userHasDangerSigns &&
         user.contact_type === 'area_community_health_supervisor'
