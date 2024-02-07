@@ -1,9 +1,9 @@
 const { expect } = require('chai');
 const TestRunner = require('cht-conf-test-harness');
-const { household } = require('../contact_summaries/summary_inputs');
-const { CONTACT_TYPES } = require('../../shared-extras');
+const { householdFormInputs } = require('../contact_summaries/summary_inputs');
+const { CONTACT_TYPES } = require('../constants');
 const harness = new TestRunner();
-describe('Household creation form', () => {
+describe('Household Contact Creation', () => {
   before(() => harness.start());
   after(() => harness.stop());
   beforeEach(
@@ -12,14 +12,22 @@ describe('Household creation form', () => {
     });
  
   it('should successfully create a household with correct details', async() => {
-    const result = await harness.fillContactCreateForm(CONTACT_TYPES.HOUSEHOLD,['person','no','yes','Name','male','no','26','0700112233',''],['river','no','yes','yes']);
-    expect(result.errors).to.be.empty;
-    console.log(result.contact,result)
-    /**
-    expect(result.contacts).to.have.lengthOf(1);
+    const result = await harness.fillContactCreateForm(
+      CONTACT_TYPES.HOUSEHOLD,
+      [...Object.values(householdFormInputs.createHouseholdPage1)], 
+      [...Object.values(householdFormInputs.createHouseholdPage2)]
+    );
+    expect(result.errors).to.be.empty;    
+    expect(result.contacts).to.have.lengthOf(2);
     expect(result.contacts.filter((contact) => contact.contact_type === CONTACT_TYPES.HOUSEHOLD).length === 1).to.be.true;
     expect(result.contacts[0]).to.deep.include({
-      name: household.ok[0][0] 
-    });**/
+      household_name: `${householdFormInputs.createHouseholdPage1.name_of_head} Household`,
+      contact_type: CONTACT_TYPES.HOUSEHOLD
+    });
+    expect(result.contacts[1]).to.deep.include({
+      contact_type: CONTACT_TYPES.HOUSEHOLD_CONTACT,
+      name: householdFormInputs.createHouseholdPage1.name_of_head,
+      sex: householdFormInputs.createHouseholdPage1.gender,
+    });
   });
 });
