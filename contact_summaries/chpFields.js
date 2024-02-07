@@ -1,5 +1,6 @@
 let thisContact = contact;
 let thisLineage = lineage;
+
 const chpFields = [
   {
     appliesToType: ['community_health_volunteer'],

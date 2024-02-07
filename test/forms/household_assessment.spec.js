@@ -28,7 +28,7 @@ describe('Household Member Assessment Form Test', () => {
     ]);
     expect(result.errors).to.be.empty;
     expect(result.report.fields).to.deep.include({
-      patient_name: 'Patient Name',
+      patient_name: 'Household Head',
       household_member_assessment: {
         initial_symptoms: 'no',
         advice_note: '',
@@ -50,7 +50,7 @@ describe('Household Member Assessment Form Test', () => {
     ]);
     expect(result.errors).to.be.empty;
     expect(result.report.fields).to.deep.include({
-      patient_name: 'Patient Name',
+      patient_name: 'Household Head',
       household_member_assessment: {
         initial_symptoms: 'yes',
         crucial_symptoms: 'acute watery diarrhea',

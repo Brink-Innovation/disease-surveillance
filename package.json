@@ -10,6 +10,7 @@
     "test-tasks": "mocha test/tasks/**/*.spec.js --timeout 20000",
     "test-forms": "mocha test/forms/**/*.spec.js --timeout 20000",
     "test-summaries": "mocha test/contact_summaries/**/*.spec.js --timeout 20000",
+    "test-targets": "mocha test/targets/**/*.spec.js --timeout 20000",
     "prettify": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.yml\" \"**/*.md\""
   },
   "devDependencies": {
