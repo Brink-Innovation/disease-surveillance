@@ -34,6 +34,8 @@ module.exports = {
   choleraFollowupScenarios:{
     choleraFollowup:['yes','yes','yes','yes','yes','yes','yes','yes','yes','yes'],
     nocholeraFollowup:['no','Recovered','no']
+},
+deathReportScenario:{
+  reportedDeath:['2024-02-05','health_facility','Died while sleeping']
 }
 };
-
