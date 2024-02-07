@@ -30,8 +30,6 @@ describe('Household Contact Creation', () => {
       sex: householdFormInputs.createHouseholdPage1.gender,
     });
 
-
-  
     const contactSummary = await harness.getContactSummary();
     expect(contactSummary.fields).to.have.lengthOf(1);
     let field = contactSummary.fields[0];
