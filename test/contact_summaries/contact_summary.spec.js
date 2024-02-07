@@ -29,5 +29,13 @@ describe('Household Contact Creation', () => {
       name: householdFormInputs.createHouseholdPage1.name_of_head,
       sex: householdFormInputs.createHouseholdPage1.gender,
     });
+
+
+  
+    const contactSummary = await harness.getContactSummary();
+    expect(contactSummary.fields).to.have.lengthOf(1);
+    let field = contactSummary.fields[0];
+    expect(field.label).to.equal('Household Head');
+    expect(field.value).to.equal(householdFormInputs.createHouseholdPage1.name_of_head);
   });
 });

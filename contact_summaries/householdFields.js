@@ -2,7 +2,6 @@ const { titleCaseLetters } = require('../nools-extras');
 
 let thisContact = contact;
 let thisLineage = lineage;
-
 const houseHoldFields = [
   {
     appliesToType: ['household'],

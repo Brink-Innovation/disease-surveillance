@@ -26,7 +26,7 @@ describe('Specimen Details Form Test', () => {
         const result = await harness.fillForm(`${formName}`, [...specimenFormScenarios.page1positiveCholeraCase],[...specimenFormScenarios.page2positiveCholeraCase]);   
         expect(result.errors).to.be.empty;    
         expect(result.report.fields).to.deep.include({
-            patient_name: 'Patient Name',
+            patient_name: 'Household Head',
             cholera_specimen: { availability: 'yes', follow_up_date: '2024-02-05' },
             specimen_details_group: {
                 specimen_type: 'both',
@@ -41,7 +41,7 @@ describe('Specimen Details Form Test', () => {
         const result = await harness.fillForm(`${formName}`, [...specimenFormScenarios.untestCholeraCase]);   
         expect(result.errors).to.be.empty;    
         expect(result.report.fields).to.deep.include({
-            patient_name: 'Patient Name',
+            patient_name: 'Household Head',
             cholera_specimen: { availability: 'no'}           
 
         })

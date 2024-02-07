@@ -7,12 +7,16 @@
   "docs": [
     {
       "_id": "patient_id",
-      "type": "person",
-      "name": "Patient Name",
-      "role": "patient",
+      "type": "contact",
+      "contact_type": "household",
+      "name": "Household Head",
+      "role": "household_contact",
       "date_of_birth": "1970-07-09",
       "sex": "female",
       "reported_date": 1706720381,
+      "contact":{
+        "name": "Household Head"
+      },
       "parent": {
         "_id": "household_id",
         "parent": {
